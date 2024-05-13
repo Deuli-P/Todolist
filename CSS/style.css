@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: gray;
+    justify-content: center;
+    text-align: center;
+}
+
+h2{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid black;
+    padding: 16px 5%;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.btn-delete{
+    background-color: firebrick;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-add{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+
+.label{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.label-title{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+}
+
+.input{
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.select-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.todo-li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    gap:10px;
+}
+
+.todo-li .btn{
+    border: 1px solid #ccc;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.todo-li .btn:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+
+.prio-1{
+    background-color: red;
+
+}
+
+.prio-2{
+    background-color: yellow;
+}
+
+.prio-3{
+    background-color: green;
+}
+
+.todo-title{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.checkbox-todo{
+    cursor: pointer;
+    height: 100%;
+    width: 20px;
+    height: 20px;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+.btn-tri{
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+
+}
+
+.tri-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    gap: 10px;
+}
+

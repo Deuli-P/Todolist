@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODOLIST</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+</head>
+<body>
+    <h1>TODO LIST:</h1>
+    <section id="'input-container" class="section inpu-section">
+        <h2 class="title-section">ADD TODO</h2>
+    
+        <label for="title" class="label label-title">Title:
+            <input type="text" id="input-title" name="title" class="input">
+        </label>
+        <div class="select-container">
+            <label for="title" class="label">Priorité:
+
+                <select id="select-priority" name="priority" class="input">
+                    <div class="select-options-container">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </div>
+                </select>
+            </label>
+        </div>
+        <button id="submit-button" class="btn btn-add">ADD</button>
+    </section>
+    <section id="title-section" >
+        <h2 class="title-list">List</h2>
+        <div class="tri-btn-container">
+            <button id="btn-tri-normal" class="btn btn-tri">
+                Plus > Moins
+            </button>
+            <button id="btn-tri-reverse" class="btn btn-tri">
+                Moins > Plus
+            </button>
+        </div>
+        <ul class="list-container">
+            <!-- ICI lES ELEMENTS -->
+        </ul>
+        <div>
+            <button id="delete-list" class="btn btn-delete">Supprimer toutes les tâches</button>
+        </div>
+    </section>
+</body>
+<script src="./JS/main.js" defer></script>
+</html>
