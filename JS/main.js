@@ -18,7 +18,6 @@ let tasks = [
     },
 ]
 
-
 const inputTitle = document.querySelector("#input-title");
 const inputPriority = document.querySelector("#select-priority");
 const SubmitButton = document.querySelector("#submit-button");
@@ -77,6 +76,34 @@ const DeleteAll = ()=> {
 
 ClearButton.addEventListener("click", DeleteAll);
 
+// Supprimer une tache
+
+
+const CheckBox = document.querySelectorAll(".checkbox-todo");
+
+const NewTasks = (text)=> {
+    return tasks.filter((task) => task.text !== text);
+}  
+
+
+const deleteTask = (e) => {
+    const liParent = e.target.parentElement.parentElement;
+    const labelParent = e.target.parentElement;
+    const text = labelParent.innerText;
+    const newVersion = NewTasks(text);
+    tasks = newVersion;
+    liParent.remove();
+}
+
+const attachEventHandlers = () => {
+    const CheckBox = document.querySelectorAll(".checkbox-todo");
+    CheckBox.forEach((checkbox) => {
+        checkbox.addEventListener('click', deleteTask);
+    });
+}
+
+attachEventHandlers();
+
 
 // Tri 
 
@@ -88,6 +115,7 @@ const sortTasks = (e) => {
     for (let task of tasks){
         renderList(task.text, task.priority);
     }
+    attachEventHandlers();
 }
 
 const SortButtonHight = document.querySelector("#btn-tri-normal");
@@ -104,6 +132,7 @@ const sortTasksReverse = (e) => {
     for (let task of tasks){
         renderList(task.text, task.priority);
     }
+    attachEventHandlers();
 }
 
 const SortButtonLow = document.querySelector("#btn-tri-reverse");
@@ -111,26 +140,4 @@ const SortButtonLow = document.querySelector("#btn-tri-reverse");
 SortButtonLow.addEventListener("click", sortTasksReverse);
 
 
-// Supprimer une tache
-const CheckBox = document.querySelectorAll(".checkbox-todo");
-
-
-const NewTasks = (text)=> {
-
-    return tasks.filter((task) => task.text !== text);
-}  
-
-const deleteTask = (e) => {
-    const liParent = e.target.parentElement.parentElement;
-    const labelParent = e.target.parentElement;
-    const text = labelParent.innerText;
-    const newVersion = NewTasks(text);
-    tasks = newVersion;
-    liParent.remove();
-}
-
-
-CheckBox.forEach((checkbox) => {
-    checkbox.addEventListener("change", deleteTask);
-})
 
